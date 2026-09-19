@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #d32f2f;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-size: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(to right, #d32f2f, #ff7043);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.hero button {
+  background: white;
+  color: #d32f2f;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+
+/* Leaflet popup chỉnh sửa margin & viền */
+.leaflet-popup {
+  margin: 0px !important;
+  /* tăng margin xung quanh popup */
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 2px !important;
+  /* padding bên trong popup */
+  border-radius: 10px !important;
+  /* bo góc */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  /* bóng nhẹ */
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  /* giữ margin nội dung bằng 0 */
+  padding: 0 !important;
+  /* padding nội dung = 0, dùng wrapper padding */
+}
+
+.leaflet-control-attribution,
+.leaflet-control-container .leaflet-control-attribution {
+  display: none !important;
+}
+
+.leaflet-bottom.leaflet-right {
+  display: none !important;
+}
+
+/* Ẩn biểu tượng mắt và biểu tượng copy mật khẩu trong input type="password" */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+}
